@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>mnemosyne</title>
+    <link href="/css/vix.css" rel="stylesheet">
+    <script src="/js/vix.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      var REACT_LOADER = REACT_LOADER || {
+        queue: [],
+        // Double indirection so we can a) patch these inner handlers
+        // when ReactLoader initialises...
+        animationStarted: e => REACT_LOADER.queue.push(e), 
+        domLoaded: e => REACT_LOADER.loaded = true,
+
+        // ...and b) use these outer handlers to remove the event
+        // listeners once DOMContentLoaded has fired.
+        animationStartedHandler: e => REACT_LOADER.animationStarted(e), 
+        domLoadedHandler: e => REACT_LOADER.domLoaded(e)
+      }
+      document.addEventListener("animationstart", REACT_LOADER.animationStartedHandler);
+      window.addEventListener("DOMContentLoaded", REACT_LOADER.domLoadedHandler);
+    </script>
+
   </head>
   <body>
+    <div data-react-app="status"></div>
   </body>
 </html>
 

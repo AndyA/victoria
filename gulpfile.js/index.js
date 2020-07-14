@@ -111,7 +111,7 @@ async function runServer() {
     browserSync.reload();
   }
 
-  watch(["views/**/*.hbs", "doc/**/*.md", "README.md*"], reloadViews);
+  watch(["www/**/*.html"], reloadViews);
 
   // watch only fires once if bin/app.js isn't a wildcard. See
   //   https://github.com/gulpjs/gulp/issues/2325
