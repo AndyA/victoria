@@ -1,0 +1,10 @@
+[data-react-app] {
+  animation-name: reactAppRootReady;
+  animation-duration: 0.001;
+}
+
+@keyframes reactAppRootReady {
+  to {
+    opacity: 0;
+  }
+}

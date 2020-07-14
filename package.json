@@ -1,0 +1,50 @@
+{
+  "author": "Andy Armstrong <andy@hexten.net>",
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      [
+        "@babel/preset-env",
+        {
+          "targets": "> 0.25%, not dead"
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "bluebird": "^3.7.2",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "lodash": "^4.17.19"
+  },
+  "description": "Victoria!",
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.1",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-live-server": "0.0.31",
+    "gulp-mocha": "^7.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "gulplog": "^1.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.1"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "victoria",
+  "repository": {},
+  "scripts": {},
+  "version": "0.1.3"
+}
