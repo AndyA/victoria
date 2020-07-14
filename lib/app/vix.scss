@@ -1,0 +1,33 @@
+body {
+  background: #111;
+  color: #ddd;
+}
+
+body,
+.line {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+
+.line {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.cmd:before {
+  content: "$ ";
+  color: #f0f;
+}
+
+.cmd {
+  background: #222;
+}
+
+.out {
+  color: #0aa;
+}
+
+.err {
+  color: #c00;
+}

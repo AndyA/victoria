@@ -7,7 +7,7 @@ const express = require("express");
 
 const app = express();
 
-//app.use(require("srv/views.js"));
+app.use("/data", require("srv/data.js"));
 
 app.use(express.static(config.get("app.root")));
 
