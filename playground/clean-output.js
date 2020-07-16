@@ -1,13 +1,8 @@
 "use strict";
 
 const { spawn } = require("child_process");
-const express = require("express");
-const app = express();
 const _ = require("lodash");
 const Promise = require("bluebird");
-const config = require("config");
-
-const commands = config.commands;
 
 function cleanOutput(lines) {
   const chunks = lines.reduce((acc, { stream, line }) => {
@@ -50,17 +45,12 @@ async function runCommands(cmds) {
   });
 }
 
-const runner = _.throttle(() => runCommands(commands), 500, {
-  trailing: false
-});
-
-app.get("/", async (req, res, next) => {
+(async () => {
   try {
-    res.json(await runner());
+    const lines = await runCommand("node", ["bin/testout.js"]);
+    for (const line of lines.lines) console.log(line);
   } catch (e) {
     console.error(e);
-    next();
+    process.exit(1);
   }
-});
-
-module.exports = app;
+})();
