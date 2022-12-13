@@ -17,7 +17,7 @@
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "config": "^3.3.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lodash": "^4.17.21",
     "md5": "^2.2.1"
   },
