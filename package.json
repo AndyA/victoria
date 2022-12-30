@@ -33,7 +33,7 @@
     "gulp": "^4.0.2",
     "gulp-debug": "^4.0.0",
     "gulp-live-server": "0.0.31",
-    "gulp-mocha": "^7.0.2",
+    "gulp-mocha": "^8.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.2.0",
